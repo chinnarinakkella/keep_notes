@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Keep Project</title>
+  </head>
+  <body>
+    <script type="module" src="/main.js"></script>
+    <div class="delallnotes">
+      <h1>Google Keep Project</h1>
+      <button class="specialButton">Delete All Notes</button>
+    </div>
+    <div class="notes">
+    </div>
+    <h2>Create New Note</h2>
+    <div class="newNote">
+      <input type="text" placeholder="Enter title name" class="titleName">
+      <textarea name="" id="" cols="30" rows="10" class="textContent"></textarea>
+      <button class="createButton">Create Note</button>
+    </div>
+  </body>
+</html>
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,800;0,900;1,400&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'playfair';
+    box-sizing: border-box;
+  }
+  body{
+    background: linear-gradient(to right, #A7FFEB, #E0F7FA);
+  }
+  .delallnotes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+  }
+  .specialButton{
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 18%;
+    font-size: 20px;
+    background: linear-gradient(to right, #FF8A65, white);
+  }
+  .notes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .notes div{
+    margin: 1rem;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #FFEBEE;
+  }
+  .notes .note h4{
+    margin-bottom: 0.5rem;
+  }
+  .notes .note p{
+    margin-bottom: 0.5rem;
+  }
+  button{
+    padding: 0.4rem;
+    border-radius: 10px;
+    background-color: #81D4FA;
+    background: linear-gradient(to bottom, #81D4FA, white);
+  }
+  .newNote{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border: 1.5px solid black;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+    background: #FFEBEE;
+  }
+  .newNote input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-left: 1rem;
+    width: 35%;
+    font-size: 15px;
+    background: #FFEBEE;
+  }
+  .newNote textarea{
+    width: 60%;
+    margin: 1rem;
+    font-size: 16px;
+    padding-left: 0.5rem;
+    border: none;
+    border-bottom: 1.5px solid black;
+    background: #FFEBEE;
+  }
+  .newNote button{
+    width: 40%;
+    margin: 0.8rem;
+  }
+  
+</style>
